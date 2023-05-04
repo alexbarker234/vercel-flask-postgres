@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Postgres With Vercel & Flask!</title>
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+        body {
+            text-align: center;         
+            background-color: #100f11;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            font-size: 4rem;
+
+            color: white;
+            font: optional;
+            font-family: "Montserrat", sans-serif;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .colorful {
+
+            background: linear-gradient(
+                to right, #f32170, #b908ff);
+            background-size: 200%;
+            animation: background-pan 3s linear infinite;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    </style>
+    <body>
+        <div class="content">This page has been accessed <span class="colorful">{{ count }}</span> times</div>
+    </body>
+</html>
