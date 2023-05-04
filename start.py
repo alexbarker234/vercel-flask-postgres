@@ -19,7 +19,13 @@ class PageGets(db.Model):
 
 @app.route('/')
 def home():   
-    listen = PageGets(date = datetime.utcnow())
-    db.session.add(listen)
-    db.session.commit()
-    return render_template('index.html', count=PageGets.query.count())
+    count = 0
+    try:
+        listen = PageGets(date = datetime.utcnow())
+        db.session.add(listen)
+        db.session.commit()
+        count=PageGets.query.count()
+    except:
+        count="ERROR"
+        pass
+    return render_template('index.html', count=count)
