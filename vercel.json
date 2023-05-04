@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "buildCommand": "flask db upgrade",
     "builds": [
         {
             "src": "start.py",

@@ -25,7 +25,8 @@ def home():
         db.session.add(listen)
         db.session.commit()
         count=PageGets.query.count()
-    except:
+    except Exception as e:
         count="ERROR"
+        print(e)
         pass
     return render_template('index.html', count=count)
