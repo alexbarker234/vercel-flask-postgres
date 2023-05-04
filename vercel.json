@@ -11,8 +11,5 @@
             "src": "/(.*)",
             "dest": "start.py"
         }
-    ],
-    "scripts": {
-        "build": "flask db upgrade"
-    }
+    ]
 }
